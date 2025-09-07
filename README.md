@@ -21,5 +21,5 @@ This script automates the initial setup of a new Debian/Ubuntu server with secur
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/server-setup.git
+git clone https://github.com/ask-sup/fresh_vps_server_config.git
 cd server-setup
