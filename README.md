@@ -19,13 +19,9 @@ A powerful interactive bash script for automated provisioning of new Debian/Ubun
 - 🎨 **Interactive Interface**: Color-coded prompts and status messages
 - 📋 **Detailed Reporting**: Generates comprehensive setup summary
 
-### Local Configuration Generation
-```bash
-./setup-server.sh
-
-## Script execute:
-
-Clone this repository:
+### Clone this repository
 ```bash
 git clone https://github.com/ask-sup/fresh_vps_server_config.git
 cd server-setup
+chmod +x setup-server.sh
+./setup-server.sh
