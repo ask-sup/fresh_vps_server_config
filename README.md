@@ -22,23 +22,23 @@ irm https://raw.githubusercontent.com/ask-sup/fresh_vps_server_config/main/setup
 A powerful interactive bash script for automated provisioning of new Debian/Ubuntu servers with enterprise-grade security settings. The script guides you through the setup process with interactive prompts, generates all necessary configuration commands, and provides a detailed summary with connection instructions.
 
 ## 📋 What You'll Need
-Server IP or domain name
-Root password for your VPS
-Your SSH public key
-(Optional) Desired username and SSH port
+- Server IP or domain name
+- Root password for your VPS
+- Your SSH public key
+- (Optional) Desired username and SSH port
 
 ## 🎯 How It Works
-Download: Script downloads via curl directly
-Interactive Setup: Answer simple questions about your server
-Config Generation: Script creates setup files locally
-Manual Execution: You run the generated commands on your server
-Complete: Your server is fully secured!
+- Download: Script downloads via curl directly
+- Interactive Setup: Answer simple questions about your server
+- Config Generation: Script creates setup files locally
+- Manual Execution: You run the generated commands on your server
+- Complete: Your server is fully secured!
 
 ## 🌐 Supported Systems
-Windows: Git Bash, WSL, PowerShell
-Linux: Ubuntu, Debian, CentOS, etc.
-macOS: Terminal, iTerm
-Any system with curl and bash
+- Windows: Git Bash, WSL, PowerShell
+- Linux: Ubuntu, Debian, CentOS, etc.
+- macOS: Terminal, iTerm
+- Any system with curl and bash
 
 ## ✨ Features
 
