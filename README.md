@@ -1,25 +1,31 @@
-# Automated Server Setup Script
+# 🚀 Automated Server Setup Script
 
-This script automates the initial setup of a new Debian/Ubuntu server with security best practices.
+![Bash](https://img.shields.io/badge/bash-v5.0+-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20(Git%20Bash)-green.svg)
+![License](https://img.shields.io/badge/license-MIT-orange.svg)
 
-## Features
+## 📖 Overview
 
-- Creates a new sudo user
-- Disables root SSH login
-- Disables password authentication (SSH keys only)
-- Changes SSH port
-- Installs and configures Fail2Ban
-- Configures UFW firewall
-- Sets up automatic security updates
+A powerful interactive bash script for automated provisioning of new Debian/Ubuntu servers with enterprise-grade security settings. The script guides you through the setup process with interactive prompts, generates all necessary configuration commands, and provides a detailed summary with connection instructions.
 
-## Prerequisites
+## ✨ Features
 
-- `sshpass` must be installed on your local machine
-- Root access to the target server
+- 🔐 **Security Hardening**: Disables root SSH access, configures firewall
+- 🔑 **Dual Authentication**: Supports both SSH keys and password authentication
+- 🛡️ **Brute Force Protection**: Fail2Ban with optimized settings
+- 🌐 **Firewall Setup**: UFW configured to allow only specified SSH port
+- 📦 **Automatic Updates**: Unattended security updates enabled
+- 👤 **User Management**: Creates sudo user with secure password
+- 🎨 **Interactive Interface**: Color-coded prompts and status messages
+- 📋 **Detailed Reporting**: Generates comprehensive setup summary
 
-## Installation
+### Local Configuration Generation
+```bash
+./setup-server.sh
 
-1. Clone this repository:
+## Script execute:
+
+Clone this repository:
 ```bash
 git clone https://github.com/ask-sup/fresh_vps_server_config.git
 cd server-setup
