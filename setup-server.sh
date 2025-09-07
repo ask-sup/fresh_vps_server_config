@@ -9,30 +9,15 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Function to print colored output
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
-
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-print_info() {
-    echo -e "${CYAN}[INFO]${NC} $1"
-}
+print_status() { echo -e "${BLUE}[INFO]${NC} $1"; }
+print_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
+print_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
+print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
+print_info() { echo -e "${CYAN}[INFO]${NC} $1"; }
 
 # Function to generate random password
 generate_password() {
-    local length=${1:-12}
-    tr -dc 'A-Za-z0-9!@#$%^&*()' < /dev/urandom | head -c $length
+    tr -dc 'A-Za-z0-9!@#$%^&*()' < /dev/urandom | head -c 12
 }
 
 # Function to validate IP address
@@ -61,7 +46,8 @@ validate_port() {
 
 # Welcome message
 echo "=========================================="
-echo "   Automated Server Setup Script"
+echo "   Fresh VPS Server Configuration Script"
+echo "   Downloadable via curl - no git needed"
 echo "=========================================="
 echo ""
 
@@ -90,7 +76,7 @@ NEW_USER=${NEW_USER:-user}
 # Get or generate password for new user
 read -p "Enter password for $NEW_USER [press Enter to generate random password]: " NEW_USER_PASSWORD
 if [ -z "$NEW_USER_PASSWORD" ]; then
-    NEW_USER_PASSWORD=$(generate_password 12)
+    NEW_USER_PASSWORD=$(generate_password)
     print_info "Generated random password: $NEW_USER_PASSWORD"
 else
     print_info "Using provided password"
@@ -112,8 +98,6 @@ if ! validate_port "$SSH_PORT"; then
 fi
 
 print_status "Starting server configuration..."
-echo ""
-print_status "Please manually connect to the server and run the following commands:"
 echo ""
 
 # Generate configuration script for manual execution
@@ -243,5 +227,3 @@ print_warning "⚠️  IMPORTANT: Save the summary file ($SUMMARY_FILE) with pas
 echo ""
 print_success "After configuration, you can connect using:"
 echo "ssh $NEW_USER@$SERVER_IP -p $SSH_PORT"
-echo ""
-print_info "Password authentication remains enabled for user: $NEW_USER"
