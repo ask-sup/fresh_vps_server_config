@@ -25,3 +25,22 @@ git clone https://github.com/ask-sup/fresh_vps_server_config.git
 cd server-setup
 chmod +x setup-server.sh
 ./setup-server.sh
+```
+
+### Script Logic Flow
+```mermaid
+graph TD
+    A[Start Script] --> B{User Confirmation}
+    B -->|Yes| C[Collect Server Details]
+    B -->|No| D[Exit]
+    
+    C --> E[Validate Inputs]
+    E --> F[Generate Password if needed]
+    F --> G[Create Configuration Script]
+    G --> H[Generate Summary Report]
+    H --> I[Display Instructions]
+    
+    I --> J[User Executes Commands on Server]
+    J --> K[Server Configuration Applied]
+    K --> L[Secure Server Ready]
+```
